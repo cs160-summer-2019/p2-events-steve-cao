@@ -21,7 +21,7 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" name = "some_button">
 					Reset
 				</button>
 			</div>
@@ -64,6 +64,29 @@
 
 <script type="text/javascript">
 	// your solution here
+//   $(".p2-circle bg-purple").on('click', () => {
+  $(".bg-purple").on('click', () => {
+    $('.bg-purple').hide(); // NOT "p2-circle bg-purple" EXCLUDE p2-circle
+  });
+  $(".bg-green").on('click', () => {
+    $('.bg-green').hide();
+    $('.bg-blue').hide();
+  });
+  $(".bg-orange:gt(1)").on('click', () => { 
+    $('.bg-orange:last').hide();             //find a way to pop OTHER bubbles
+    $('.bg-orange:gt(2)').hide();
+  });
+  $("#gradient-circle").hover(function() {
+    $('#gradient-circle').hide();
+  });
+  $("button[name='some_button']").click(function() {
+    $('.bg-purple').show();
+    $('.bg-green').show();
+    $('.bg-blue').show();
+    $('.bg-orange').show();
+    $('#gradient-circle').show();
+  });
+  
 
 </script>
 </body>
